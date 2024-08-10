@@ -5,6 +5,8 @@ import common.AXI3Len
 
 class core_top extends BlackBox {
     val axiParams = new AXI3Len
+    axiParams.awqos = 0
+    axiParams.arqos = 0
     val io = IO(new Bundle {
         val aclk = Input(Bool())
         val aresetn = Input(Bool())
