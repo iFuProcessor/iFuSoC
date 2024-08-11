@@ -6,9 +6,9 @@ gen_dir = $(base_dir)/gen
 
 SBT = sbt
 
-compile: $(gen_dir)/iFuCore.sv
+compile: $(gen_dir)/iFuSoC.sv
 
-$(gen_dir)/iFuCore.sv: $(shell find $(src_dir) -name '*.scala')
+$(gen_dir)/iFuSoC.sv: $(shell find $(src_dir) -name '*.scala')
 	$(SBT) "run $(gen_dir)"
 
 log:
